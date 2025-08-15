@@ -3,20 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BadChat</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Groq AI Assistant</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="chat-container">
-        <div class="chat-header">
-            <h2>AI Assistant</h2>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="logo">
+                <img src="https://groq.com/assets/logo-dark.svg" alt="Groq Logo">
+                <span>AI Assistant</span>
+            </div>
+            <button class="new-chat-btn">
+                <i class="fas fa-plus"></i> New Chat
+            </button>
+            <div class="chat-history">
+                <h3>Recent Chats</h3>
+                <ul id="chat-history-list">
+                    <!-- Chat history will appear here -->
+                </ul>
+            </div>
+            <div class="user-profile">
+                <div class="avatar">U</div>
+                <div class="user-info">
+                    <span class="username">User</span>
+                    <span class="user-email">user@example.com</span>
+                </div>
+            </div>
         </div>
-        <div class="chat-messages" id="chat-messages">
-            <!-- Messages will appear here -->
-        </div>
-        <div class="chat-input">
-            <input type="text" id="user-input" placeholder="Type your message here..." autocomplete="off">
-            <button id="send-button">Send</button>
+        <div class="chat-container">
+            <div class="chat-header">
+                <h2>Groq AI Assistant</h2>
+                <div class="model-info">
+                    <span class="model-tag">Mixtral-8x7b</span>
+                    <span class="speed-tag"><i class="fas fa-bolt"></i> Ultra Fast</span>
+                </div>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <!-- Messages will appear here -->
+            </div>
+            <div class="chat-input-container">
+                <div class="input-wrapper">
+                    <textarea id="user-input" placeholder="Ask Groq AI anything..." rows="1"></textarea>
+                    <button id="send-button" class="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+                <div class="disclaimer">
+                    Groq AI may produce inaccurate information. Consider verifying important information.
+                </div>
+            </div>
         </div>
     </div>
 
